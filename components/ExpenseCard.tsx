@@ -1,5 +1,8 @@
 import { View, Text, StyleSheet } from "react-native";
-import { Expense } from "@/./types/types";
+import { Expense } from "@/../../types/types";
+import React from "react";
+import { styles } from "./ExpenseCard.styles";
+
 
 export default function ExpenseCard({ expense }: { expense: Expense }) {
   return (
@@ -11,24 +14,3 @@ export default function ExpenseCard({ expense }: { expense: Expense }) {
   );
 }
 
-const styles = StyleSheet.create({
-  card: {
-    backgroundColor: "#2a2a2a",
-    padding: 12,
-    borderRadius: 6,
-    marginBottom: 10,
-  },
-  title: {
-    color: "#fff",
-    fontWeight: "bold",
-    fontSize: 16,
-  },
-  amount: {
-    color: "#4CAF50",
-    fontSize: 14,
-  },
-  time: {
-    color: "#999",
-    fontSize: 12,
-  },
-});

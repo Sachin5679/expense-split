@@ -1,5 +1,7 @@
 import { View, Text, StyleSheet } from "react-native";
 import { Group } from "@/./types/types";
+import { styles } from "./GroupCard.styles";
+
 
 export default function GroupCard({ group }: { group: Group }) {
   return (
@@ -10,19 +12,3 @@ export default function GroupCard({ group }: { group: Group }) {
   );
 }
 
-const styles = StyleSheet.create({
-  card: {
-    backgroundColor: "#333",
-    padding: 16,
-    borderRadius: 8,
-    marginBottom: 12,
-  },
-  name: {
-    fontSize: 18,
-    color: "#fff",
-    fontWeight: "bold",
-  },
-  members: {
-    color: "#bbb",
-  },
-});
