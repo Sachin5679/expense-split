@@ -1,12 +1,13 @@
 import { create } from "zustand";
 import AsyncStorage from "@react-native-async-storage/async-storage";
-import { persist } from "zustand/middleware";
-import { Group, Expense } from "@/types/types";
+import { persist, createJSONStorage } from "zustand/middleware";
+import { Group, Expense, Member } from "@/types/types";
 
 type Store = {
   groups: Group[];
   addGroup: (group: Group) => void;
   addExpense: (groupId: string, expense: Expense) => void;
+  addMember: (groupId: string, member: Member) => void;
 };
 
 export const useStore = create<Store>()(
@@ -22,10 +23,16 @@ export const useStore = create<Store>()(
         );
         set({ groups: updated });
       },
+      addMember: (groupId, member) => {
+        const updated = get().groups.map((g) =>
+          g.id === groupId ? { ...g, members: [...g.members, member] } : g
+        );
+        set({ groups: updated });
+      },
     }),
     {
       name: "expense-store",
-      storage: AsyncStorage as any, // <- this avoids the overcomplication
+      storage: createJSONStorage(() => AsyncStorage),
     }
   )
 );

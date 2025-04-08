@@ -4,17 +4,7 @@ import { useStore } from "@/./store/useStore";
 import GroupCard from "@/./components/GroupCard";
 
 export default function Index() {
-  const { groups, addGroup } = useStore();
-
-  const handleAddGroup = () => {
-    const newGroup = {
-      id: Date.now().toString(),
-      name: `Group ${groups.length + 1}`,
-      members: [],
-      expenses: [],
-    };
-    addGroup(newGroup);
-  };
+  const { groups } = useStore();
 
   return (
     <View style={styles.container}>
@@ -24,28 +14,28 @@ export default function Index() {
         data={groups}
         keyExtractor={(item) => item.id}
         renderItem={({ item }) => (
-<Link
-  href={{
-    pathname: "/group/[id]",
-    params: { id: item.id }
-  }}
-  asChild
->
-  <Pressable>
-    <GroupCard group={item} />
-  </Pressable>
-</Link>
-
-
+          <Link
+            href={{
+              pathname: "/group/[id]",
+              params: { id: item.id },
+            }}
+            asChild
+          >
+            <Pressable>
+              <GroupCard group={item} />
+            </Pressable>
+          </Link>
         )}
         ListEmptyComponent={
           <Text style={styles.emptyText}>No groups yet. Add one!</Text>
         }
       />
 
-      <Pressable style={styles.button} onPress={handleAddGroup}>
-        <Text style={styles.buttonText}>+ Create New Group</Text>
-      </Pressable>
+      <Link href="/add-group" asChild>
+        <Pressable style={styles.button}>
+          <Text style={styles.buttonText}>+ Create New Group</Text>
+        </Pressable>
+      </Link>
     </View>
   );
 }
