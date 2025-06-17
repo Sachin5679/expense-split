@@ -3,7 +3,7 @@ A minimal group expense tracker built with React Native, Zustand, and AsyncStora
 
 ## 📹 Demo
 
-[▶️ Watch Demo Video on Google Drive](https://drive.google.com/file/d/1tLc95JYoa5y-mbxYp-NS9OLE8yStFNQR/view?usp=sharing)
+[▶️ Watch Demo Video](https://drive.google.com/file/d/1tLc95JYoa5y-mbxYp-NS9OLE8yStFNQR/view?usp=sharing)
 
 
 ---
