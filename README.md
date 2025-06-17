@@ -1,50 +1,33 @@
-# Welcome to your Expo app 👋
+# SplitMate 💸
+A minimal group expense tracker built with React Native, Zustand, and AsyncStorage. Designed for splitting expenses with friends, housemates, or travel groups.
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+## 📹 Demo
 
-## Get started
+[▶️ Watch Demo Video on Google Drive](https://drive.google.com/file/d/1tLc95JYoa5y-mbxYp-NS9OLE8yStFNQR/view?usp=sharing)
 
-1. Install dependencies
 
-   ```bash
-   npm install
-   ```
+---
 
-2. Start the app
+## 🚀 Features
 
-   ```bash
-    npx expo start
-   ```
+- 📋 **Group Overview**: View all created or joined groups from the Home screen.
+- ➕ **Add Expenses**: Log expenses with title, description, category, amount, payer, and custom/equal splits.
+- 🧮 **Real-time Calculation**: Automatically calculates owed/receivable amounts.
+- 💾 **Persistent Storage**: Data saved locally using `AsyncStorage`, even after app is closed.
+- 🎨 **Smooth UI/UX**: Clean component-based design with icon and animation support.
 
-In the output, you'll find options to open the app in a
+---
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+## 🔐 Bonus Features
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+- 👥 **View Group Members**: See all members added to a group.
+- 🔐 **Google Authentication**: Login using Firebase Google Auth (optional but implemented).
 
-## Get a fresh project
+---
 
-When you're ready, run:
+## 🛠 Tech Stack
 
-```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+- **Framework**: React Native with Expo
+- **State Management**: Zustand
+- **Storage**: AsyncStorage
+- **Authentication**: Firebase Google Auth
